@@ -1,16 +1,30 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { UserCircleIcon } from "lucide-react";
 
+/**官方解释
+ * SignedOut: https://clerk.com/docs/components/control/signed-out
+ *  */
 export const AuthButton = () => {
   // TODO: Add different auth states
   return (
-    <Button
-      variant="outline"
-      className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-500
-       border-blue-500/20 rounded-full shadow-none [&_svg]:size-4"
-    >
-      <UserCircleIcon />
-      Sign in
-    </Button>
+    <>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton>
+          <Button
+            variant="outline"
+            className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-500 border-blue-500/20 rounded-full shadow-none [&_svg]:size-4"
+          >
+            <UserCircleIcon />
+            Sign in
+          </Button>
+        </SignInButton>
+      </SignedOut>
+    </>
   );
 };
