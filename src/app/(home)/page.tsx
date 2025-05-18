@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 export default async function Home() {
+  // trpc 服务端取出数据放入缓存
   void trpc.hello.prefetch({ text: "T Zachary" });
 
   return (
