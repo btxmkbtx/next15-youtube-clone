@@ -24,3 +24,25 @@ bun add -D drizzle-kit@0.30.3 tsx@4.19.2
 ## svix
 
 bun add svix@1.45.1
+
+## trpc
+
+bun add @trpc/server@11.0.0-rc.730
+
+bun add @trpc/client@11.0.0-rc.730
+
+bun add @trpc/react-query@11.0.0-rc.730
+
+bun add @tanstack/react-query@5.65.1
+
+bun add zod client-only server-only
+
+## redis
+
+bun add @upstash/redis@1.34.3
+
+bun add @upstash/ratelimit@2.0.5
+
+## 其他
+
+bun add react-error-boundary@5.0.0
