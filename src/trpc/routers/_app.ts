@@ -1,3 +1,4 @@
+/* // 示例代码 hello
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../init";
 export const appRouter = createTRPCRouter({
@@ -13,6 +14,15 @@ export const appRouter = createTRPCRouter({
         greeting: `hello ${opts.input.text}`,
       };
     }),
+});
+// export type definition of API
+export type AppRouter = typeof appRouter;
+*/
+
+import { categoriesRouter } from "@/modules/categories/server/procedures";
+import { createTRPCRouter } from "../init";
+export const appRouter = createTRPCRouter({
+  categories: categoriesRouter,
 });
 // export type definition of API
 export type AppRouter = typeof appRouter;
