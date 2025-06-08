@@ -27,7 +27,7 @@ const CategoriesSkeleton = () => {
 const CategoriesSectionSuspense = ({ categoryId }: CategoriesSectionProps) => {
   const router = useRouter();
 
-  const [categories] = trpc.categories.getMany.useSuspenseQuery();
+  const [categories] = trpc.categories.getMany.useSuspenseQuery(); //useSuspenseQuery 拿到的缓存数据需要通过 trpc 的 prefetch 来完成缓存注入。
 
   const data = categories.map(({ name, id }) => ({ value: id, label: name }));
 

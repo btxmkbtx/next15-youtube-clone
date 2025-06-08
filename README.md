@@ -43,6 +43,12 @@ bun add @upstash/redis@1.34.3
 
 bun add @upstash/ratelimit@2.0.5
 
+## mux
+
+bun add @mux/mux-uploader-react@1.1.1
+
+bun add @mux/mux-node@9.0.1
+
 ## 其他
 
 bun add react-error-boundary@5.0.0

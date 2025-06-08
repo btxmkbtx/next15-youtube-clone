@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { TRPCProvider } from "@/trpc/client";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
@@ -26,7 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ClerkProvider afterSignOutUrl="/">
-          <TRPCProvider>{children}</TRPCProvider>
+          <TRPCProvider>
+            <Toaster />
+            {children}
+          </TRPCProvider>
         </ClerkProvider>
       </body>
     </html>
