@@ -20,6 +20,8 @@ bun add @clerk/nextjs@6.10.3
 bun add drizzle-orm@0.39.0 @neondatabase/serverless@0.10.4 dotenv@16.4.7
 <br/>
 bun add -D drizzle-kit@0.30.3 tsx@4.19.2
+<br/>
+bun add drizzle-zod@0.7.0
 
 ## svix
 
@@ -39,15 +41,29 @@ bun add zod client-only server-only
 
 ## redis
 
+### 限制恶意登录请求次数上限
+
 bun add @upstash/redis@1.34.3
 
 bun add @upstash/ratelimit@2.0.5
+
+### AI 生成封面用
+
+bun add @upstash/workflow@0.2.6
 
 ## mux
 
 bun add @mux/mux-uploader-react@1.1.1
 
 bun add @mux/mux-node@9.0.1
+
+bun add @mux/mux-player-react@3.2.4
+
+## uploadthing
+
+bun add uploadthing@7.4.4
+
+bun add @uploadthing/react@7.1.5
 
 ## 其他
 
