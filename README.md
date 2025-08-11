@@ -47,7 +47,7 @@ bun add @upstash/redis@1.34.3
 
 bun add @upstash/ratelimit@2.0.5
 
-### AI 生成封面用
+### 开发 AI background jobs
 
 bun add @upstash/workflow@0.2.6
 

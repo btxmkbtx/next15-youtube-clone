@@ -128,6 +128,7 @@ export const POST = async (request: Request) => {
       await db.delete(videos).where(eq(videos.muxUploadId, data.upload_id));
       break;
     }
+    // 只有创建视频时开启subtitle才会触发这个case：src\modules\videos\server\procedures.ts的行124
     case "video.asset.track.ready": {
       const data = payload.data as VideoAssetTrackReadyWebhookEvent["data"] & {
         asset_id: string;

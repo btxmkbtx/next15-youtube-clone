@@ -65,7 +65,7 @@ export const videos = pgTable("videos", {
   muxAssetId: text("mux_asset_id").unique(),
   muxUploadId: text("mux_upload_id").unique(), // muxUploadId是设计给Mux的webhook用的
   muxPlaybackId: text("mux_playback_id").unique(),
-  muxTrackId: text("mux_track_id").unique(),
+  muxTrackId: text("mux_track_id").unique(), // 用于从stream.mux.com提取字幕文本的主键，参考:src\app\api\videos\workflows\title\route.ts => get-transcript
   muxTrackStatus: text("mux_track_status"),
   thumbnailUrl: text("thumbnail_url"),
   thumbnailKey: text("thumbnail_key"), // thumbnailUrl有可能会变，所以需要key来确定封面图片的服务器存储路径
